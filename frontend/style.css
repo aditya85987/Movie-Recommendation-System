@@ -1,0 +1,54 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #c800ff;  /* Bootstrap primary blue */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    background-color: #ffcccc;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(255, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    color: #b30000;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: 2px solid #ff4d4d;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+#recommendations {
+    margin-top: 20px;
+    color: #800000;
+    font-size: 1.1em;
+}
