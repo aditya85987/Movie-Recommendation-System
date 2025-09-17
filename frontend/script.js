@@ -1,6 +1,8 @@
 const movieInput = document.getElementById("movieInput");
 const suggestionsBox = document.getElementById("suggestions");
 let currentSuggestions = [];
+const BASE_URL = 'https://movie-recommendation-system-akoz.onrender.com';
+
 
 // Add loading state management
 function showLoading(button) {
@@ -36,13 +38,14 @@ movieInput.addEventListener("keyup", async function () {
             suggestionsBox.innerHTML = '<div class="suggestion">Searching...</div>';
             suggestionsBox.style.display = "block";
             
-            const response = await fetch(`http://127.0.0.1:5000/search?q=${encodeURIComponent(query)}`);
+            const response = await fetch(`${BASE_URL}/search?q=${encodeURIComponent(query)}`);
             const data = await response.json();
 
             suggestionsBox.innerHTML = "";
 
             if (data.matches && data.matches.length > 0) {
                 currentSuggestions = data.matches;
+            
                 data.matches.forEach((movie, index) => {
                     const div = document.createElement("div");
                     div.className = "suggestion";
@@ -95,10 +98,10 @@ async function getRecommendations() {
     const originalText = showLoading(button);
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/recommend", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ movie })
+        const response = await fetch(`${BASE_URL}/recommend`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(movie)
         });
 
         const data = await response.json();
