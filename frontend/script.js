@@ -101,7 +101,7 @@ async function getRecommendations() {
         const response = await fetch(`${BASE_URL}/recommend`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(movie)
+          body: JSON.stringify({movie})
         });
 
         const data = await response.json();
