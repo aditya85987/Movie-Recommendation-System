@@ -1,5 +1,5 @@
 Cython==0.29.36
-numpy==1.25.3
+numpy==1.24.4
 Flask==3.0.3
 flask-cors==6.0.0
 requests==2.32.2
