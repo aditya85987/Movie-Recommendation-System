@@ -9,7 +9,6 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import urllib3
 import gdown
-
 # Disable SSL warnings for production (optional)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
