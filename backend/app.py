@@ -43,9 +43,9 @@ try:
     movies = pickle.load(open('movie_latest.pkl', 'rb'))
 
     # Always download similarity.pkl from Google Drive
-    logger.info("Downloading similarity.pkl from Google Drive...")
-    url = "https://drive.google.com/uc?id=1GeH4V4ZT5W_6ITBWqUBpPhSXNVqMic4N"
-    gdown.download(url, "similarity.pkl", quiet=False, fuzzy=True)
+    # logger.info("Downloading similarity.pkl from Google Drive...")
+    # url = "https://drive.google.com/uc?id=1GeH4V4ZT5W_6ITBWqUBpPhSXNVqMic4N"
+    # gdown.download(url, "similarity.pkl", quiet=False, fuzzy=True)
 
     similarity = pickle.load(open('similarity.pkl', 'rb'))
     logger.info(f"Data loaded successfully. Movies: {len(movies)}, Similarity shape: {similarity.shape}")
