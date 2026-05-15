@@ -15,8 +15,13 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
+import os
+from dotenv import load_dotenv
 
-TMDB_API_KEY = 'ee11b35464a0049626a7684f706d0398'
+load_dotenv()
+
+TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+
 
 app = Flask(__name__)
 CORS(app)
